@@ -4,12 +4,13 @@ from datetime import datetime
 st.title("Question 1:")
 
 
-def get_current_time():
-    now = datetime.now()
-    return now.hour, now.minute
+def get_current_time_in_user_timezone():
+    user_timezone = get_user_timezone()  # Use the appropriate method to get the user's time zone
+    now_utc = datetime.now(pytz.utc)
+    now_user_time = now_utc.astimezone(user_timezone)
+    return now_user_time.hour, now_user_time.minute
 
-
-hour, minute = get_current_time()
+hour, minute = get_current_time_in_user_timezone()
 
 if 22 <= hour < 24 or (hour == 23 and minute <= 59):
     # This is considered a success within your criteria
