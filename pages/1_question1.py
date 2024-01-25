@@ -10,7 +10,7 @@ st.title("Question 1:")
 now = datetime.now()
 hour, minute = now.hour, now.minute
 
-if 23 <= hour <= 23 and 0 <= minute <= 59:
+if hour == 23:
     # This is considered a success within your criteria
     st.success("You have succeeded! and you get to the next level")
 
