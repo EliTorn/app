@@ -9,6 +9,7 @@ st.title("Question 1:")
 
 now = datetime.now()
 hour, minute = now.hour, now.minute
+st.write(f"{hour}:{minute}")
 
 if hour == 23:
     # This is considered a success within your criteria
