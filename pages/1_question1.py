@@ -1,11 +1,12 @@
 import streamlit as st
 from datetime import datetime
+import pytz
 
 st.title("Question 1:")
 
 
 def get_current_time_in_user_timezone():
-    user_timezone = get_user_timezone()  # Use the appropriate method to get the user's time zone
+    user_timezone = pytz.timezone('Asia/Jerusalem') # Use the appropriate method to get the user's time zone
     now_utc = datetime.now(pytz.utc)
     now_user_time = now_utc.astimezone(user_timezone)
     return now_user_time.hour, now_user_time.minute
