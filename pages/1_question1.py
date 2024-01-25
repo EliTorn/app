@@ -7,8 +7,8 @@ st.title("Question 1:")
 
 
 
- now = datetime.now()
- hour, minute = now.hour, now.minute
+now = datetime.now()
+hour, minute = now.hour, now.minute
 
 if 23 <= hour <= 23 and 0 <= minute <= 59:
     # This is considered a success within your criteria
