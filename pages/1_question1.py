@@ -13,7 +13,7 @@ def get_current_time_in_user_timezone():
 
 hour, minute = get_current_time_in_user_timezone()
 
-if 22 <= hour < 24 or (hour == 23 and minute <= 59):
+if 23 <= hour <= 23 and 0 <= minute <= 59:
     # This is considered a success within your criteria
     st.success("You have succeeded! and you get to the next level")
 
